@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<link rel="stylesheet" href="PartsOfSpeech.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="PartsOfSpeech.js"></script>
+
+<head>
+	<title>Parts Of Speech</title>
+</head>
+
+<body>
+
+	<h1>Parts of Speech</h1>
+	<h2 class="info">Please select which part of speech the <em>emphasized</em> word is.</h2>
+
+	<div id="question">I'm the question, I might be long or short, but I have a <em>emphasized</em> word.</div>
+
+	<div id="radioContainer">
+		<INPUT TYPE="radio" NAME="partofSpeech" VALUE=1 id="radio0">Noun
+		<INPUT TYPE="radio" NAME="partofSpeech" VALUE=2 id="radio1">Adj
+		<INPUT TYPE="radio" NAME="partofSpeech" VALUE=3 id="radio2">Verb
+		<INPUT TYPE="radio" NAME="partofSpeech" VALUE=4 id="radio3">Adverb
+	</div>
+
+	<div id="buttonContainer">
+		<INPUT TYPE="button" id="button"     value="Get New Question" >
+		<input TYPE="button" id="clickMe"    value="I Give up"  />
+		<INPUT TYPE="button" id="radioCntrl" value="Get New Radio Buttons" >
+	</div>
+
+	
+	<div id="NextQuestion">
+		<INPUT TYPE="button" id="nextQuestion" value="Next Question" >
+	</div>
+	
+	
+	
+	<footer>
+		<div id="links_container">
+		<a href="index.html" id="home">Home</a>
+		<a href="about.html" id="about">About</a>
+		</div>
+	</footer>
+
+</body>
+</html>
