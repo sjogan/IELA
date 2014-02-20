@@ -46,4 +46,16 @@ footer {
 	}
 	
 	
+	#scorebox{
+	border-style:groove;
+	background-color: #ccc;
+	border-color: red;
+	}
 	
+	#outerscorebox{
+
+	border-style:groove;
+	width:40%;
+	border-color: black;
+	margin: 20px;
+	}

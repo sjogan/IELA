@@ -14,7 +14,7 @@ var Heysadfoimessages3 = ["Nice <em>emphasized</em> job!",
 					
 				
 					
-var messages33 = ["I bought a <em>beautiful</em> dress at the mall.",
+var messages = ["I bought a <em>beautiful</em> dress at the mall.",
 				"What did <em>she</em> ask you to do?",
 				"I left my shoes <em>under</em> the kitchen table.",
 				"If we finish our work <em>quickly</em> we can go to the movies.",
@@ -60,12 +60,6 @@ var qa_array = [
 	var questionNumber = 0;
 	var radioContNbr = 0;
 	var radioGridNumber = 0;
-	var correctAnswer = 0;
-	
-	var score = 0;
-	
-	
-	
 
 	radioButtons0 = new Object();
 	radioButtons0.r0="Noun";
@@ -138,33 +132,6 @@ var qa_array = [
 	}	
 
 
-	
-	function nextQuestion() {
-
-		
-		var newQuestion = qa_array[levels].question;
-		var correctAnswer = qa_array[levels].answer;
-		var newRadioBank = qa_array[levels].radiobank;
-		document.getElementById('question').innerHTML = newQuestion;
-		questionNumber = levels;
-		
-		levels += 1;
-		
-		if(levels>numberLevels)
-		{ 
-			levels = 0;
-		}
-		
-		newRadioGrid(newRadioBank);
-		
-	}	
-	
-	function updateScoreOnScreen(){
-		//score
-		document.getElementById('scorebox').innerText = 'Your Score: '+ score;
-	
-	}
-	
 	function newRadioGrid(rgNumber){
 		
 		var isRadioLabel = 0;
@@ -299,26 +266,14 @@ var qa_array = [
 	}
   
 	
-	$('input[type=radio]').click(function(){
-		//alert(this.value + " " + correctAnswer);
-		if(this.value == correctAnswer)
-		{
-			// correct answer!
-			alert("correct!")
-			score = score + 1;
-		}
-		else 
-		{
-			// incorrect answer.
-			alert("incorrect!")
-		}
-		updateScoreOnScreen();
+	$('#formA input[type=radio]').click(function(){
+		//alert(this.value);
 	});
 	
 	
 	function radioGridControl()
 	{
-		newRadioGrid(radioGridNumber);
+			newRadioGrid(radioGridNumber);
 		
 		radioGridNumber += 1;
 		if (radioGridNumber > 3)
@@ -339,8 +294,8 @@ var qa_array = [
 	
 	
 	$('#nextQuestion').click(function(){
-		nextQuestion();	
-		//radioGridControl();
+		newQuestion();	
+		radioGridControl();
 	});
 	
 	
