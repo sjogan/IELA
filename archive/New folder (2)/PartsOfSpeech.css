@@ -6,6 +6,7 @@ body{
 	overflow: auto;
 }
 
+
 footer {
 	position:absolute;
 	text-align: center;
@@ -19,10 +20,22 @@ footer {
 
 	}
 
+
+	#question{
+		/*position:relative;
+		text-align: center;
+		left:50px;
+		top: 50px;*/
+	}
+	
 	#radioContainer{
 		position:relative;
+		/*position:absolute;*/
 		border-style:solid ;
+		/*width: 500px;*/
 		width:40%;
+		/*left: 700px;*/
+		/*top:160px;*/
 		margin:auto;
 
 	}
@@ -31,11 +44,21 @@ footer {
 		position:relative;
 		top:80px;
 	}
-
+	
+	
+	#scorebox{
+	/*
+	border-style:groove;
+	background-color: #ccc;
+	border-color: red;
+	*/
+	}
+	
 	#outerscorebox{
 	position:relative;
 	border-style:groove;
 	width: 10%;
+	/*height: 20px;*/
 	border-color: black;
 	margin:auto;
 	

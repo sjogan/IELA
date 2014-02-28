@@ -108,7 +108,9 @@ var qa_array = [
 	}	
 
 
+	
 	function nextQuestion() {
+
 		
 		var newQuestion = qa_array[levels].question;
 		var newRadioBank = qa_array[levels].radiobank;
@@ -118,6 +120,9 @@ var qa_array = [
 		questionNumber = levels;
 		
 		levels += 1;
+		
+		//alert("my cA: " + correctAnswer)
+		
 		
 		if(levels>numberLevels)
 		{ 
@@ -283,6 +288,7 @@ var qa_array = [
 				{
 					// incorrect answer.
 					alert("incorrect!");
+					//alert("Radio Button: " + this.value + " Answer:" + correctAnswer);
 				}
 				updateScoreOnScreen();
 				nextQuestion();	
@@ -299,5 +305,37 @@ var qa_array = [
 		}
 	
 	});
+	
+	
+	function radioGridControl()
+	{
+		newRadioGrid(radioGridNumber);
+		
+		radioGridNumber += 1;
+		if (radioGridNumber > 3)
+		{
+			radioGridNumber = 0;
+		}
+
+	}
+	
+	$('#radioCntrl').click(function(){
+		radioGridControl();
+	});
+
+		
+	$('#button').click(function(){
+		newQuestion();		
+	});
+	
+	
+
+
+	
+	function reset()
+	{
+			// ToDo:  build reset to re-play the game.
+	}
+
 
 });
